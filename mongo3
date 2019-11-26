@@ -1,0 +1,39 @@
+db.book.insert({BName:"shyamchi aai",cost:700,author:"sane guruji",published:2007})
+
+db.book.insert({BName:"TwoSaints",cost:1700,author:"raguramkrishna",published:2017})
+
+db.book.insert({BName:"ramkrushna paramhans", cost:800,author:"raguramkrishna",published:2017})
+
+db.book.insert({BName:"DMS",cost:300, author:"raguramkrishna" ,published:2005})
+
+db.publisher.insert({pname:"O Reilly",language:"English",books:[{BName:"ramkrushna paramhans"},{BName:"Two Saints"}],city:"mumbai"})
+
+db.publisher.insert({pname:"vision",language:"English",books:[{BName:"DMS"}],city:"pune"})
+
+db.publisher.insert({pname:"O Reilly",language:"marathi",books:[{BName:"shyamchi aai"}],city:"mumbai"})
+
+
+a)> 
+db.publisher.find({city:"mumbai"})
+
+b)> 
+db.book.find({cost:{$gt:1000}})
+
+c) > 
+db.book.find({author:"raguramkrishna",published:2017})
+
+d)>
+ db.publisher.find({pname:"O Reilly",$or:[{language:"English"},{language:"marathi"}]})
+
+
+
+
+
+
+
+
+
+
+
+
+
